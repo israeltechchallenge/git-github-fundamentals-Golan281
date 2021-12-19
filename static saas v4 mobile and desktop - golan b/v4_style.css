@@ -1,0 +1,173 @@
+* {
+    font-family: 'Poppins', serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+}
+
+@media screen and (min-width:800px) {
+    body {
+        background: #F5F6F8;
+    }
+    body .gb-grid-container div {
+        background-color: #FFFFFF;
+    }
+    /*GB custom grid:*/
+    .gb-grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 60px repeat(4, 1fr);
+        grid-template-areas: "sidebar searchbar searchbar searchbar" "sidebar taskview taskview dealdash" "sidebar taskview taskview dealdash" "sidebar taskview taskview taskdash" "sidebar taskview taskview taskdash";
+        column-gap: 6vh;
+        row-gap: 2vw;
+    }
+    .grid-item-searchbar {
+        grid-area: searchbar;
+    }
+    .grid-item-searchbar-input {
+        min-width: 800px;
+    }
+    .grid-item-sidebar {
+        grid-area: sidebar;
+    }
+    .grid-item-dealdash {
+        grid-area: dealdash;
+    }
+    .grid-item-taskdash {
+        grid-area: taskdash;
+    }
+    .grid-item-taskview {
+        grid-area: taskview;
+    }
+    .grid-item-taskview-singletask {
+        min-width: 95%;
+    }
+    .grid-item-taskview-singletask strong p {
+        min-width: 85%;
+        padding: 0;
+    }
+}
+
+
+/*color pallete:*/
+
+.green-bg {
+    background-color: #2ED47A;
+}
+
+.green-txt {
+    color: #2ED47A;
+}
+
+.red-bg {
+    background-color: #F7685B;
+}
+
+.red-txt {
+    color: #F7685B;
+}
+
+.blue-bg {
+    background-color: #109CF1;
+}
+
+.blue-txt {
+    color: #109CF1;
+}
+
+.yellow-txt {
+    color: #FFB946;
+}
+
+.grey-txt {
+    color: #6A707E;
+}
+
+.lt-grey-txt {
+    color: #90A0B7;
+}
+
+.md-grey-txt {
+    color: #A5ABB0;
+}
+
+
+/*specific elements and tweaks:*/
+
+.num-days p:hover,
+ul li:hover,
+.grid-item-sidebar div:hover {
+    color: #109CF1;
+}
+
+.links {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.small-circle-blue {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 3px solid #109CF1;
+}
+
+.small-font {
+    font-size: 85%;
+}
+
+#search-bar {
+    min-width: 250px;
+    border: none;
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+.progressfade {
+    height: 4px;
+    width: 80%;
+    background-color: #2ED47A;
+}
+
+.grid-item-taskview-singletask {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+.grid-item-dealdash-graphic {
+    background-image: url(./img/graphic.png);
+    background-repeat: no-repeat;
+}
+
+.grid-item-dealdash-p {
+    border-bottom: 1px dashed grey;
+}
+
+.percentage-chart {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(#FFFFFF, #FFFFFF) content-box, linear-gradient(var(--v), #f2f2f2 50%, transparent 0) 0/calc(var(--s)*100%), linear-gradient(var(--v), #2ED47A 50%, transparent 0) 0/calc((1 - var(--s))*100%), linear-gradient(to right, #F7685B 40%, #FFB946 0);
+}
+
+.percentage-chart-text {
+    display: block;
+}
+
+.percentage-chart-text h1 {
+    margin: none;
+    padding-top: 9vh;
+    padding-left: 5.5vw;
+}
+
+.task-rectangle-btn {
+    border-radius: 10%;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+}
